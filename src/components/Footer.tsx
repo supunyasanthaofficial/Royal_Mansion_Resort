@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
 
       <div className="mt-16 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-center items-center text-[11px] text-gray-400 uppercase tracking-[0.2em]">
         <p className="text-center">
-          © 2026 Travel & Tourism | Powered by Travel & Tourism
+          2026 © All Rights Reserved | Royal Mansion Resort | Designed & Developed by EVER EFFICIENT Business Management (Pvt) Ltd
         </p>
       </div>
     </footer>
