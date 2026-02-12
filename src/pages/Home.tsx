@@ -10,6 +10,7 @@ const Home = () => {
         subtitle="Royal Mansion Resort,"
         description="where luxury meets tranquility. Experience an unforgettable escape with elegance, comfort, and breathtaking surroundings."
         bgImage={header1}
+        showButton={true}
       />
 
       {/* <section className="py-20 bg-white text-center">
