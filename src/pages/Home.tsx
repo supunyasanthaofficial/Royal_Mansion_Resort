@@ -1,6 +1,8 @@
 import Header from "../components/Header";
+import InfoSection from "../components/InfoSection";
 
 import header1 from "../assets/images/Header1.jpg";
+import ContactCTA from "../components/ContactCTA";
 
 const Home = () => {
   return (
@@ -12,10 +14,8 @@ const Home = () => {
         bgImage={header1}
         showButton={true}
       />
-
-      {/* <section className="py-20 bg-white text-center">
-        <h2 className="text-3xl font-serif">Explore Our Story</h2>
-      </section> */}
+      <InfoSection />
+      <ContactCTA/>
     </main>
   );
 };
