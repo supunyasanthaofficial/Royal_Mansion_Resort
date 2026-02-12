@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Facilities from "./pages/Facilities";
 import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -28,10 +29,7 @@ function App() {
             />
           </Routes>
         </main>
-
-        {/* <footer className="bg-[#121212] text-gray-500 py-10 text-center text-xs uppercase tracking-widest border-t border-white/5">
-          <p>&copy; 2026 Royal Mansion Resort. Crafted for Luxury.</p>
-        </footer> */}
+        <Footer />
       </div>
     </Router>
   );
