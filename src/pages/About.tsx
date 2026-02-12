@@ -8,8 +8,9 @@ const Home = () => {
       <Header
         title="Welcome to"
         subtitle="Royal Mansion Resort,"
-        description="where luxury meets tranquility. Experience an unforgettable escape with elegance, comfort, and breathtaking surroundings."
+        description="From a hidden tropicl escape to a symbol of elegance, Royal Mansion Resort Villa was born out of a dream to offer unforgettable getways in the heart of Sri Lanka."
         bgImage={header2}
+        height="h-[70vh]"
       />
 
       {/* <section className="py-20 bg-white text-center">
