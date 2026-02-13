@@ -1,6 +1,6 @@
 import React from "react";
-import info1 from "../assets/images/info1.jpg";
-import info2 from "../assets/images/info2.jpg";
+import Info1 from "../assets/images/Info1.jpg";
+import Info2 from "../assets/images/Info2.jpg";
 
 const InfoSection: React.FC = () => {
   return (
@@ -10,7 +10,7 @@ const InfoSection: React.FC = () => {
           <div className="w-full md:w-1/2 flex flex-col">
             <div className="mb-10 shadow-xl overflow-hidden">
               <img
-                src={info2}
+                src={Info2}
                 alt="Exterior View"
                 className="w-full rounded-2xl h-[450px] object-cover"
               />
@@ -38,7 +38,7 @@ const InfoSection: React.FC = () => {
             </h2>
             <div className="mb-10 shadow-xl overflow-hidden">
               <img
-                src={info1}
+                src={Info1}
                 alt="Interior View"
                 className="w-full rounded-2xl h-[380px] object-cover "
               />
