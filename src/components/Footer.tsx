@@ -84,8 +84,8 @@ const Footer: React.FC = () => {
 
       <div className="mt-16 pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-center items-center text-[11px] text-gray-700 uppercase tracking-[0.2em]">
         <p className="text-center">
-          © 2025 All Rights Reserved | Edirisinghe Homes | Designed & Developed
-          by{" "}
+          © {new Date().getFullYear()} All Rights Reserved | Edirisinghe Homes |
+          Designed & Developed by{" "}
           <a
             href="https://everefficient.lk/"
             target="_blank"
