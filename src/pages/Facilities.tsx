@@ -10,7 +10,7 @@ const Home = () => {
         subtitle="Royal Mansion Resort,"
         description="We do not give you just rooms to stay. We give you an environment so you can expierence the best while on a holiday with us.Walk into our hotel and enjoy a refreshing, rejuvenating,day-off with us."
         bgImage={header3}
-        height="h-[80vh]"
+        height="h-[90vh]"
       />
 
       <Offers />
