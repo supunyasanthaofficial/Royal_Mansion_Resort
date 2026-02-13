@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  FaInstagram,
-  FaWhatsapp,
-  FaFacebookF,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaInstagram, FaWhatsapp, FaFacebookF, FaTiktok } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (
@@ -38,28 +33,39 @@ const Footer: React.FC = () => {
 
           <div className="flex space-x-5 text-gray-500">
             <a
-              href="#"
+              href="https://www.instagram.com/royal_mansion_resort_pussellaw/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-pink-600 transition-all duration-300 transform hover:scale-110"
             >
               <FaInstagram size={20} />
             </a>
+
             <a
-              href="#"
+              href="https://wa.me/94764001245"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-green-500 transition-all duration-300 transform hover:scale-110"
             >
               <FaWhatsapp size={20} />
             </a>
+
             <a
-              href="#"
+              href="https://www.facebook.com/profile.php?id=61573387734967"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-blue-600 transition-all duration-300 transform hover:scale-110"
             >
               <FaFacebookF size={20} />
             </a>
+
             <a
-              href="#"
+              href="https://www.tiktok.com/@royal.mansion.res"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-red-600 transition-all duration-300 transform hover:scale-110"
             >
-              <FaYoutube size={20} />
+              <FaTiktok size={20} />
             </a>
           </div>
         </div>

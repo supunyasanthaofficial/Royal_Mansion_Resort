@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  FaInstagram,
-  FaWhatsapp,
-  FaFacebookF,
-  FaYoutube,
-} from "react-icons/fa";
+import { FaInstagram, FaWhatsapp, FaFacebookF, FaTiktok } from "react-icons/fa";
 
 const ContactSection: React.FC = () => {
   return (
@@ -47,28 +42,39 @@ const ContactSection: React.FC = () => {
             </h3>
             <div className="flex space-x-8 text-2xl">
               <a
-                href="#"
+                href="https://www.instagram.com/royal_mansion_resort_pussellaw/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-pink-600 transition-all duration-300 transform hover:scale-110"
               >
-                <FaInstagram />
+                <FaInstagram size={20} />
               </a>
+
               <a
-                href="#"
+                href="https://wa.me/94764001245"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-green-500 transition-all duration-300 transform hover:scale-110"
               >
-                <FaWhatsapp />
+                <FaWhatsapp size={20} />
               </a>
+
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61573387734967"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-blue-600 transition-all duration-300 transform hover:scale-110"
               >
-                <FaFacebookF />
+                <FaFacebookF size={20} />
               </a>
+
               <a
-                href="#"
+                href="https://www.tiktok.com/@royal.mansion.res"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-red-600 transition-all duration-300 transform hover:scale-110"
               >
-                <FaYoutube />
+                <FaTiktok size={20} />
               </a>
             </div>
           </div>
