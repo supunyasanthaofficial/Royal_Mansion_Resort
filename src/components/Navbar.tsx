@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 
@@ -6,12 +6,37 @@ import Logo from "../assets/images/Logo.png";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setIsOpen(false);
+    };
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  }, []);
+
   return (
     <nav className="absolute top-0 left-0 w-full z-50 flex items-center justify-between px-6 md:px-10 py-2 bg-white/10 backdrop-blur-md text-white border-b border-white/10">
-      <div className="flex items-center md:ml-12 z-60">
+      <div className="flex items-center md:ml-12">
         <div className="w-20 h-20 md:w-28 md:h-28 flex items-center justify-center mr-4">
           <img
             src={Logo}
@@ -26,14 +51,14 @@ const Navbar: React.FC = () => {
 
       <ul className="hidden md:flex absolute inset-0 items-center justify-center space-x-8 text-sm font-medium uppercase tracking-widest pointer-events-none">
         <li className="pointer-events-auto">
-          <Link to="/" className="hover:text-blue-400 font-bold transition">
+          <Link to="/" className="hover:text-[#f0da60] font-bold transition">
             Home
           </Link>
         </li>
         <li className="pointer-events-auto">
           <Link
             to="/about"
-            className="hover:text-blue-400 font-bold transition"
+            className="hover:text-[#f0da60] font-bold transition"
           >
             About
           </Link>
@@ -41,7 +66,7 @@ const Navbar: React.FC = () => {
         <li className="pointer-events-auto">
           <Link
             to="/facilities"
-            className="hover:text-blue-400 font-bold transition"
+            className="hover:text-[#f0da60] font-bold transition"
           >
             Facilities
           </Link>
@@ -49,14 +74,14 @@ const Navbar: React.FC = () => {
         <li className="pointer-events-auto">
           <Link
             to="/contact"
-            className="hover:text-blue-400 font-bold transition"
+            className="hover:text-[#f0da60] font-bold transition"
           >
             Contact Us
           </Link>
         </li>
       </ul>
 
-      <div className="flex items-center z-[60]">
+      <div className="flex items-center">
         <div className="hidden md:block ml-auto">
           <Link
             to="/book"
@@ -70,54 +95,55 @@ const Navbar: React.FC = () => {
         </div>
 
         <button
+          ref={buttonRef}
           onClick={toggleMenu}
-          className="md:hidden text-3xl text-white focus:outline-none ml-4"
+          className="md:hidden text-3xl text-white focus:outline-none ml-4 relative z-50"
         >
           {isOpen ? <HiX /> : <HiMenuAlt3 />}
         </button>
-      </div>
 
-      <div
-        className={`fixed inset-0 bg-black/95 transition-transform duration-500 ease-in-out transform ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        } md:hidden flex flex-col items-center justify-center space-y-8 z-[55]`}
-      >
-        <Link
-          to="/"
-          onClick={toggleMenu}
-          className="text-xl font-bold uppercase tracking-widest hover:text-blue-400 transition"
-        >
-          Home
-        </Link>
-        <Link
-          to="/about"
-          onClick={toggleMenu}
-          className="text-xl font-bold uppercase tracking-widest hover:text-blue-400 transition"
-        >
-          About
-        </Link>
-        <Link
-          to="/facilities"
-          onClick={toggleMenu}
-          className="text-xl font-bold uppercase tracking-widest hover:text-blue-400 transition"
-        >
-          Facilities
-        </Link>
-        <Link
-          to="/contact"
-          onClick={toggleMenu}
-          className="text-xl font-bold uppercase tracking-widest hover:text-blue-400 transition"
-        >
-          Contact Us
-        </Link>
-
-        <Link
-          to="/book"
-          onClick={toggleMenu}
-          className="mt-4 border border-white px-10 py-4 text-sm font-bold uppercase tracking-widest bg-white text-black"
-        >
-          Book Now
-        </Link>
+        {isOpen && (
+          <div
+            ref={menuRef}
+            className="fixed md:hidden top-20 left-1/2 transform -translate-x-1/2 w-64 bg-white/20 backdrop-blur-xl border border-white/30 rounded-2xl shadow-2xl p-6 flex flex-col items-center space-y-5 z-50"
+          >
+            <Link
+              to="/"
+              onClick={toggleMenu}
+              className="text-white text-lg font-bold uppercase tracking-widest hover:text-blue-400 transition"
+            >
+              Home
+            </Link>
+            <Link
+              to="/about"
+              onClick={toggleMenu}
+              className="text-white text-lg font-bold uppercase tracking-widest hover:text-blue-400 transition"
+            >
+              About
+            </Link>
+            <Link
+              to="/facilities"
+              onClick={toggleMenu}
+              className="text-white text-lg font-bold uppercase tracking-widest hover:text-blue-400 transition"
+            >
+              Facilities
+            </Link>
+            <Link
+              to="/contact"
+              onClick={toggleMenu}
+              className="text-white text-lg font-bold uppercase tracking-widest hover:text-blue-400 transition"
+            >
+              Contact Us
+            </Link>
+            <Link
+              to="/book"
+              onClick={toggleMenu}
+              className="w-full text-center border border-white/60 px-6 py-3 text-sm font-bold uppercase tracking-widest bg-white text-black rounded-lg hover:bg-white/90 transition"
+            >
+              Book Now
+            </Link>
+          </div>
+        )}
       </div>
     </nav>
   );
