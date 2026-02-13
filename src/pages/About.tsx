@@ -12,7 +12,7 @@ const Home = () => {
         subtitle="Royal Mansion Resort,"
         description="From a hidden tropicl escape to a symbol of elegance, Royal Mansion Resort Villa was born out of a dream to offer unforgettable getways in the heart of Sri Lanka."
         bgImage={header2}
-        height="h-[80vh]"
+        height="h-[90vh]"
       />
       <AboutIntro />
       <OurStory/>
