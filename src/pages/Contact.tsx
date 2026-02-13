@@ -1,7 +1,7 @@
 import Header from "../components/Header";
-
+import Contact from "../components/Contact";
 import header4 from "../assets/images/Header4.jpg";
-
+import Map from "../components/Map"
 const Home = () => {
   return (
     <main>
@@ -13,9 +13,8 @@ const Home = () => {
         height="h-[80vh]"
       />
 
-      {/* <section className="py-20 bg-white text-center">
-        <h2 className="text-3xl font-serif">Explore Our Story</h2>
-      </section> */}
+      <Contact />
+      <Map/>
     </main>
   );
 };
