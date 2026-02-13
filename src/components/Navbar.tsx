@@ -83,15 +83,17 @@ const Navbar: React.FC = () => {
 
       <div className="flex items-center">
         <div className="hidden md:block ml-auto">
-          <Link
-            to="/book"
+          <a
+            href="https://booking.royalmansionresorts.com/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group relative border border-white/60 px-8 py-3 text-[12px] font-bold uppercase tracking-[0.15em] overflow-hidden transition-all duration-300 hover:text-black flex items-center shadow-lg"
           >
             <span className="relative z-10 flex items-center">
               Book Now <span className="ml-3 text-lg">→</span>
             </span>
             <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-          </Link>
+          </a>
         </div>
 
         <button
@@ -135,13 +137,16 @@ const Navbar: React.FC = () => {
             >
               Contact Us
             </Link>
-            <Link
-              to="/book"
+
+            <a
+              href="https://booking.royalmansionresorts.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={toggleMenu}
               className="w-full text-center border border-white/60 px-6 py-3 text-sm font-bold uppercase tracking-widest bg-white text-black rounded-lg hover:bg-white/90 transition"
             >
               Book Now
-            </Link>
+            </a>
           </div>
         )}
       </div>
