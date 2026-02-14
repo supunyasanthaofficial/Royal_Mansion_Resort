@@ -5,10 +5,12 @@ import About from "./pages/About";
 import Facilities from "./pages/Facilities";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop/>
       <div className="font-sans text-gray-900 bg-white">
         <Navbar />
 
