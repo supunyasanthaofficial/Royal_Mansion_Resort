@@ -1,8 +1,14 @@
 import React from "react";
 import Info1 from "../assets/images/Info1.jpg";
 import Info2 from "../assets/images/Info2.jpg";
+import { useNavigate } from "react-router-dom";
 
 const InfoSection: React.FC = () => {
+const navigate = useNavigate();
+const handleNavigation = () => {
+  navigate("/contact");
+}
+
   return (
     <section className="py-24 px-6 md:px-20 bg-white">
       <div className="max-w-7xl mx-auto">
@@ -27,7 +33,9 @@ const InfoSection: React.FC = () => {
               couples, families, or solo travelers seeking a memorable
               experience in paradise.
             </p>
-            <button className="w-fit bg-[#1a1a1a] text-white px-10 py-4 text-[11px] uppercase tracking-[0.2em] font-medium hover:bg-black transition-all duration-300">
+            <button 
+            onClick={handleNavigation}
+            className="w-fit bg-[#1a1a1a] text-white px-10 py-4 text-[11px] uppercase tracking-[0.2em] font-medium hover:bg-black transition-all duration-300">
               Know More
             </button>
           </div>
