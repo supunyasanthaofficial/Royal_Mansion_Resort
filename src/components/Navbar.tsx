@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className="fixed top-0 left-0 w-full z-50 bg-white/5 backdrop-blur-sm
+      className="absolute top-0 left-0 w-full z-50 bg-white/5 backdrop-blur-sm
                  border-b border-white/10 text-white"
       aria-label="Main navigation"
     >
