@@ -84,7 +84,7 @@ const Navbar: React.FC = () => {
       <div className="flex items-center">
         <div className="hidden md:block ml-auto">
           <a
-            href="https://booking.royalmansionresorts.com/"
+            href="https://royal-mansion-booking-page.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative border border-white/60 px-8 py-3 text-[12px] font-bold uppercase tracking-[0.15em] overflow-hidden transition-all duration-300 hover:text-black flex items-center shadow-lg"
