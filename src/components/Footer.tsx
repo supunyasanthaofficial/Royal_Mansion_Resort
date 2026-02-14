@@ -93,14 +93,14 @@ const Footer: React.FC = () => {
           </h3>
           <ul className="text-sm text-gray-700 space-y-3">
             <li>
-              <Link to="/" className="hover:text-[#f0da60] transition-colors">
+              <Link to="/" className="hover:text-[#e9130c] font-semibold transition-colors">
                 Home
               </Link>
             </li>
             <li>
               <Link
                 to="/about"
-                className="hover:text-[#f0da60] transition-colors"
+                className="hover:text-[#e9130c] font-semibold transition-colors"
               >
                 About
               </Link>
@@ -108,7 +108,7 @@ const Footer: React.FC = () => {
             <li>
               <Link
                 to="/facilities"
-                className="hover:text-[#f0da60] transition-colors"
+                className="hover:text-[#e9130c] font-semibold transition-colors"
               >
                 Facilities
               </Link>
@@ -116,7 +116,7 @@ const Footer: React.FC = () => {
             <li>
               <Link
                 to="/contact"
-                className="hover:text-[#f0da60] transition-colors"
+                className="hover:text-[#e9130c] font-semibold transition-colors"
               >
                 Contact Us
               </Link>
