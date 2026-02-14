@@ -81,9 +81,9 @@ const Navbar: React.FC = () => {
               <h1 className="text-base sm:text-lg md:text-xl font-serif font-bold tracking-tight text-white/95 leading-none">
                 Royal Mansion
               </h1>
-              <p className="text-[10px] text-white/60 md:text-xs">
+              {/* <p className="text-[10px] text-white/60 md:text-xs">
                 Resort & Villas
-              </p>
+              </p> */}
             </div>
           </div>
 
