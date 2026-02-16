@@ -217,9 +217,9 @@ const Navbar: React.FC = () => {
             </a>
           </nav>
 
-          <div className="mt-6 text-center text-xs text-white/70">
+          {/* <div className="mt-6 text-center text-xs text-white/70">
             © {new Date().getFullYear()} Royal Mansion
-          </div>
+          </div> */}
         </div>
       </div>
     </nav>
