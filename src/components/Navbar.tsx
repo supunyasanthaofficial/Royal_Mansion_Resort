@@ -115,6 +115,14 @@ const Navbar: React.FC = () => {
               </li>
               <li>
                 <Link
+                  to="/packages"
+                  className="hover:text-[#f0da60] font-bold transition"
+                >
+                  Packages
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/contact"
                   className="hover:text-[#f0da60] font-bold transition"
                 >
@@ -196,6 +204,13 @@ const Navbar: React.FC = () => {
               className="text-white text-lg font-semibold uppercase tracking-widest hover:text-[#f0da60] focus:outline-none focus:ring-2 focus:ring-[#f0da60] px-2"
             >
               Facilities
+            </Link>
+            <Link
+              to="/packages"
+              onClick={closeAndNavigate}
+              className="text-white text-lg font-semibold uppercase tracking-widest hover:text-[#f0da60] focus:outline-none focus:ring-2 focus:ring-[#f0da60] px-2"
+            >
+              Packages
             </Link>
 
             <Link
