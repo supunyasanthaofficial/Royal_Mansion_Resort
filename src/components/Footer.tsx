@@ -93,7 +93,10 @@ const Footer: React.FC = () => {
           </h3>
           <ul className="text-sm text-gray-700 space-y-3">
             <li>
-              <Link to="/" className="hover:text-[#e9130c] font-semibold transition-colors">
+              <Link
+                to="/"
+                className="hover:text-[#e9130c] font-semibold transition-colors"
+              >
                 Home
               </Link>
             </li>
@@ -111,6 +114,14 @@ const Footer: React.FC = () => {
                 className="hover:text-[#e9130c] font-semibold transition-colors"
               >
                 Facilities
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/packages"
+                className="hover:text-[#e9130c] font-semibold transition-colors"
+              >
+                Packages
               </Link>
             </li>
             <li>
