@@ -6,11 +6,12 @@ import Facilities from "./pages/Facilities";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
+import Packages from "./pages/Packages";
 
 function App() {
   return (
     <Router>
-      <ScrollToTop/>
+      <ScrollToTop />
       <div className="font-sans text-gray-900 bg-white">
         <Navbar />
 
@@ -20,6 +21,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/facilities" element={<Facilities />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="packages" element={<Packages />} />
 
             <Route
               path="/book"
