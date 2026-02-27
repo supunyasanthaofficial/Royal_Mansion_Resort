@@ -239,15 +239,12 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import Logo from "../assets/images/Logo.png";
-
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const firstLinkRef = useRef<HTMLAnchorElement | null>(null);
-
   const toggleMenu = () => setIsOpen((s) => !s);
-
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (
@@ -263,7 +260,6 @@ const Navbar: React.FC = () => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen]);
-
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === "Escape") setIsOpen(false);
@@ -271,7 +267,6 @@ const Navbar: React.FC = () => {
     document.addEventListener("keydown", handleEsc);
     return () => document.removeEventListener("keydown", handleEsc);
   }, []);
-
   useEffect(() => {
     if (typeof window === "undefined") return;
     const original = document.body.style.overflow;
@@ -284,18 +279,15 @@ const Navbar: React.FC = () => {
       document.body.style.overflow = original || "";
     };
   }, [isOpen]);
-
   useEffect(() => {
     if (isOpen) {
       const t = setTimeout(() => firstLinkRef.current?.focus(), 50);
       return () => clearTimeout(t);
     }
   }, [isOpen]);
-
   const closeAndNavigate = () => {
     setIsOpen(false);
   };
-
   return (
     <nav
       className="absolute top-0 left-0 w-full z-50 bg-white md:bg-white/5 md:backdrop-blur-sm
@@ -434,20 +426,19 @@ const Navbar: React.FC = () => {
             >
               Contact Us
             </Link>
+            <a
+              href="https://booking.royalmansionresorts.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={closeAndNavigate}
+              className="w-full text-center border border-black/60 px-6 py-3 text-sm font-bold uppercase tracking-widest bg-black text-white rounded-lg hover:bg-black/90 transition"
+            >
+              Book Now
+            </a>
           </nav>
-          <a
-            href="https://booking.royalmansionresorts.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setIsOpen(false)}
-            className="mt-3 w-full text-center border border-black/60 px-6 py-3 text-sm font-bold uppercase tracking-widest bg-black text-white rounded-lg hover:bg-black/90 transition"
-          >
-            Book Now
-          </a>
         </div>
       </div>
     </nav>
   );
 };
-
 export default Navbar;
